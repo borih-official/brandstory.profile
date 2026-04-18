@@ -1,10 +1,10 @@
 # brandstory.profile
-BORIH 보리 브랜드 소개 및 프로필
+BORIH 보리 브랜드 홈페이지
 
 바로가기
-[https://borih-official.github.io/brandstory.profile/](https://borih-official.github.io/brandstory.profile/)
+[https://borih.kr]
 
-The Art of Being
+The Art of Being Well
 BORIH는 각자의 웰니스 루틴과 라이프스타일을 솔직하게 나누며, 서로에게 영감이 되는 커뮤니티입니다.
 
 보리처럼 강인하고 유연한, 삶의 미학을 당신과 함께.
