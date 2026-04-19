@@ -270,6 +270,8 @@ section {
   color: var(--text-mid);
   line-height: 2.1;
   max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section-body em {
   font-style: italic;
@@ -442,7 +444,9 @@ section {
 .team__header {
   max-width: 1200px;
   margin: 0 auto 72px;
+  text-align: center;
 }
+.team__header .divider { margin-left: auto; margin-right: auto; }
 
 .profile-full {
   max-width: 1200px;
@@ -1551,7 +1555,8 @@ section {
   opacity: 0.5;
 }
 .purpose-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
-.purpose-header { margin-bottom: 64px; }
+.purpose-header { margin-bottom: 64px; text-align: center; max-width: 720px; margin-left: auto; margin-right: auto; }
+.purpose-header .divider { margin-left: auto; margin-right: auto; }
 .purpose-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1622,7 +1627,8 @@ section {
   opacity: 0.6;
 }
 .biz-inner { max-width: 1120px; margin: 0 auto; }
-.biz-header { margin-bottom: 64px; }
+.biz-header { margin-bottom: 64px; text-align: center; max-width: 720px; margin-left: auto; margin-right: auto; }
+.biz-header .divider { margin-left: auto; margin-right: auto; }
 .biz-axes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2249,6 +2255,12 @@ section {
   .contact-title { font-size: 26px; }
   .ig-btn { font-size: 13px; padding: 16px 22px; }
   .ig-btn-icon { width: 32px; height: 32px; }
+  /* Mobile centered-alignment hardening */
+  .section-label, .section-title, .section-body,
+  .strat-text, .strat-close, .strat-close-em, .strat-close-line, .strat-sign { text-align: center; }
+  .strat-text { font-size: 15px; line-height: 2; word-break: keep-all; }
+  .section-body { font-size: 14px; line-height: 1.95; word-break: keep-all; }
+  .section-title { word-break: keep-all; }
 }
 </style>
 </head>
