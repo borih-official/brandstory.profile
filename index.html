@@ -2331,6 +2331,259 @@ section {
   .section-body { font-size: 14px; line-height: 1.95; word-break: keep-all; }
   .section-title { word-break: keep-all; }
 }
+
+/* ══ 2026 v3 additions ══ */
+.cover-tearoom {
+  display: inline-block;
+  margin-top: 28px;
+  font-family: var(--font-ko);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  padding: 10px 22px;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 999px;
+  transition: background .28s ease, color .28s ease;
+  animation: fadeUp 1s ease 1s both;
+}
+.cover-tearoom:hover { background: rgba(255,255,255,.16); color: #fff; }
+
+.pb-signature-grid--single { grid-template-columns: 1fr; }
+.pb-collab-label {
+  margin-top: 36px;
+  font-family: var(--font-brand);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+.pb-collab-label + .pb-signature-grid { margin-top: 14px; }
+.pb-inline-link { color: inherit; text-decoration: none; border-bottom: 1px solid var(--sage-light); }
+.pb-inline-link:hover { border-color: var(--sage-deep); }
+.pb-sig-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-ko);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--sage-deep);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sage-light);
+  padding-bottom: 2px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.pb-sig-link:hover { color: var(--text-dark); border-color: var(--sage-deep); }
+
+.tearoom-wrap {
+  background: var(--warm-white);
+  padding: 140px 56px;
+}
+.tearoom-inner { max-width: 1080px; margin: 0 auto; }
+.tearoom-header { max-width: 720px; margin: 0 auto 64px; text-align: center; }
+.tearoom-header .divider { margin-left: auto; margin-right: auto; }
+.tearoom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.tearoom-card {
+  background: var(--cream);
+  padding: 40px 36px;
+  border-top: 3px solid var(--sage-deep);
+  display: flex;
+  flex-direction: column;
+}
+.tearoom-card--soon { border-top-color: var(--teal-dust); }
+.tearoom-badge {
+  font-family: var(--font-brand);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin-bottom: 14px;
+}
+.tearoom-card--soon .tearoom-badge { color: var(--teal-dust); }
+.tearoom-name {
+  font-family: var(--font-ko);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-dark);
+  letter-spacing: .02em;
+  margin-bottom: 6px;
+}
+.tearoom-en {
+  font-family: var(--font-brand);
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: var(--text-light);
+  margin-bottom: 18px;
+}
+.tearoom-desc {
+  font-family: var(--font-ko);
+  font-size: 13.5px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.95;
+  letter-spacing: .02em;
+  flex: 1;
+}
+.tearoom-btn {
+  align-self: flex-start;
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--sage-deep);
+  color: var(--warm-white);
+  font-family: var(--font-ko);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 2px;
+  transition: background .28s ease, transform .28s ease;
+}
+.tearoom-btn:hover { background: var(--text-dark); transform: translateY(-1px); }
+.tearoom-btn--soon {
+  background: transparent;
+  color: var(--teal-dust);
+  border: 1px solid var(--teal-dust);
+  cursor: default;
+}
+.tearoom-btn--soon:hover { background: transparent; transform: none; }
+
+@media (max-width: 900px) {
+  .tearoom-wrap { padding: 84px 28px; }
+  .tearoom-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .tearoom-card { padding: 32px 24px; }
+}
+
+/* ══ v3 color layer · Sage × Teal × Morning Orange ══ */
+:root {
+  --morning:       #d97b3f;
+  --morning-deep:  #c25f23;
+  --morning-mist:  #f7e9dc;
+}
+/* 섹션 라벨 · 프로그램 번호는 틸로 산뜻하게 */
+.section-label, .pb-idx { color: var(--teal-dust); }
+/* 구분선 — 세이지에서 아침빛으로 */
+.divider { background: linear-gradient(90deg, var(--sage-deep), var(--morning)); height: 2px; }
+/* 강조 문장 — 세이지 딥 유지, 밑줄에 아침빛 */
+.section-body em { color: var(--sage-deep); background: linear-gradient(transparent 72%, rgba(217,123,63,.18) 72%); font-style: normal; }
+/* 프로그램 카드 테두리 — 세이지 / 틸 교차 */
+.pb-sig-card { border-left-color: var(--teal-dust); }
+.program-block.pb-dark .pb-body { border-left-color: var(--teal-dust); }
+.pb-list-item::before { color: var(--teal-dust); }
+/* 메뉴 '차실' — 아침 포인트 */
+.nav-links a[href="#tearoom"] { color: var(--morning-deep); font-weight: 400; }
+.nav-links a[href="#tearoom"]::before { content: '●'; font-size: 6px; vertical-align: 2px; margin-right: 6px; color: var(--morning); }
+/* 첫 화면 차실 버튼 — 아침빛 */
+.cover-tearoom {
+  background: rgba(250,248,244,.14);
+  border-color: rgba(250,248,244,.55);
+  color: #fff;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.cover-tearoom::before {
+  content: '';
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #f2b07e;
+  box-shadow: 0 0 10px 2px rgba(242,176,126,.55);
+  margin-right: 10px;
+  vertical-align: 2px;
+}
+.cover-tearoom:hover { background: rgba(250,248,244,.92); border-color: rgba(250,248,244,.92); color: var(--sage-deep); }
+/* 보리 차실 섹션 — 새벽에서 아침으로 */
+.tearoom-wrap {
+  position: relative;
+  background: linear-gradient(180deg, var(--warm-white) 0%, var(--morning-mist) 100%);
+}
+.tearoom-wrap::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--sage-deep), var(--teal-dust) 45%, var(--morning));
+}
+.tearoom-header .section-label { color: var(--morning-deep); }
+.tearoom-card { background: #fffdf9; border-top-color: var(--morning); box-shadow: 0 18px 40px rgba(194,95,35,.07); }
+.tearoom-card .tearoom-badge { color: var(--morning-deep); }
+.tearoom-btn { background: var(--morning-deep); }
+.tearoom-btn:hover { background: #a94f1c; }
+.tearoom-card--soon { border-top-color: var(--teal-dust); }
+.tearoom-card--soon .tearoom-badge { color: var(--teal-dust); }
+.tearoom-btn--soon { background: transparent; color: var(--teal-dust); border-color: var(--teal-dust); }
+.tearoom-btn--soon:hover { background: transparent; }
+/* 인라인 링크 */
+.pb-inline-link { border-bottom-color: var(--morning); }
+
+.pb-cta {
+  margin-top: 24px;
+  display: inline-flex; align-items: center; gap: 22px;
+  padding: 16px 22px 16px 24px;
+  background: var(--cream);
+  border: 1px solid var(--sage-light);
+  border-left: 3px solid var(--teal-dust);
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background .25s ease, border-color .25s ease, transform .25s ease;
+}
+.pb-cta-txt { display: flex; flex-direction: column; gap: 4px; font-family: var(--font-ko); font-size: 14px; font-weight: 500; letter-spacing: .03em; }
+.pb-cta-lbl { font-family: var(--font-brand); font-size: 9px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase; color: var(--teal-dust); }
+.pb-cta-arrow {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--sage-deep); color: var(--warm-white); font-size: 14px;
+  transition: transform .25s ease, background .25s ease;
+}
+.pb-cta:hover { background: #fffdf9; border-color: var(--sage-deep); transform: translateY(-1px); }
+.pb-cta:hover .pb-cta-arrow { transform: translateX(3px); background: var(--morning-deep); }
+@media (max-width: 640px) { .pb-cta { display: flex; justify-content: space-between; } }
+
+/* ══ 요약 섹션 · 짙은 밤색(Bark Deep) ══ */
+:root { --bark-deep: #4f4339; }
+.strat-wrap { background: linear-gradient(180deg, var(--bark-deep) 0%, #5c4f43 100%); }
+.strat-wrap::before { color: rgba(232,223,200,.035); }
+.strat-wrap .section-label { color: var(--barley-light, #c4b07a); }
+.strat-wrap .section-title { color: var(--warm-white); }
+.strat-wrap .divider { background: linear-gradient(90deg, #c4b07a, var(--morning)); }
+.strat-wrap .section-body { color: rgba(250,248,244,.78); }
+.strat-wrap .section-body em { color: #e8dfc8; background: none; }
+.strat-wrap .strat-text { color: rgba(250,248,244,.82); }
+.strat-wrap .strat-text strong { color: #e8dfc8; }
+.strat-wrap .strat-close-line { color: var(--warm-white); }
+.strat-wrap .strat-close-line em { color: #c4b07a; }
+.strat-wrap .strat-sign { color: #c4b07a; border-top-color: rgba(232,223,200,.22); }
+.strat-partners { margin: 72px auto 0; text-align: center; max-width: 760px; }
+.strat-partners-lbl {
+  font-family: var(--font-brand); font-size: 10px; font-weight: 500;
+  letter-spacing: .32em; text-transform: uppercase;
+  color: rgba(232,223,200,.7); margin-bottom: 22px;
+}
+.strat-partners-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 10px;
+}
+.strat-partners-list li > a, .strat-partners-list li > span { color: inherit; text-decoration: none; display: block; }
+.strat-partners-list li:has(a) { transition: background .25s ease, border-color .25s ease; }
+.strat-partners-list li:has(a):hover { background: rgba(232,223,200,.12); border-color: rgba(232,223,200,.6); }
+.strat-partners-list li:has(a) a::after { content: ' ↗'; font-size: 11px; opacity: .6; }
+.strat-partners-list li {
+  font-family: var(--font-ko); font-size: 13.5px; font-weight: 400; letter-spacing: .04em;
+  color: #e8dfc8;
+  padding: 9px 18px;
+  border: 1px solid rgba(232,223,200,.28);
+  border-radius: 999px;
+}
+@media (max-width: 640px) { .strat-partners-list li { font-size: 12.5px; padding: 8px 14px; } }
 </style>
 </head>
 <body>
@@ -2342,6 +2595,7 @@ section {
     <h1 class="cover-logo en-brand">BORIH</h1>
     <p class="cover-sub en-brand">The Art of Being Well</p>
     <p class="cover-tagline">보리는 차로 잇는 웰니스 라이프스타일을 만들어갑니다.</p>
+    <a class="cover-tearoom" href="#tearoom">오늘 아침, 보리 차실에서 <span aria-hidden="true">→</span></a>
   </div>
   <div class="cover-scroll">
     <span class="en-body">Scroll</span>
@@ -2356,6 +2610,7 @@ section {
     <li><a href="#brand">브랜드</a></li>
     <li><a href="#axes">방향성</a></li>
     <li><a href="#programs">프로그램</a></li>
+    <li><a href="#tearoom">차실</a></li>
     <li><a href="#contact">문의</a></li>
   </ul>
 </nav>
@@ -2444,11 +2699,6 @@ section {
           차 한 잔의 입구에서 시작해, 몸과 마음을 함께 움직이는 웰니스 경험을 설계합니다.
           정적인 시간과 동적인 시간이 나란히 놓일 때, 인사이트는 더 깊어집니다.
         </p>
-        <div class="biz-axis-items">
-          <div class="biz-axis-item">보리 티트릿</div>
-          <div class="biz-axis-item">보리 마음 시그니처</div>
-          <div class="biz-axis-item">보리 AI 클래스 · 웰니스 × 기술</div>
-        </div>
         </div>
       </div>
       <div class="biz-axis" data-num="02">
@@ -2463,9 +2713,6 @@ section {
           웰니스는 유행이 아니라 리듬입니다.
           보리는 24절기의 호흡으로 웰니스 트렌드 신호를 읽고 현장에서 길어낸 인사이트와 함께 기록해 전합니다.
         </p>
-        <div class="biz-axis-items">
-          <div class="biz-axis-item">보리 프레스</div>
-        </div>
         </div>
       </div>
       <div class="biz-axis" data-num="03">
@@ -2480,9 +2727,6 @@ section {
           보리의 감도로 골라낸 공간과 사람을 느슨하게, 그러나 깊게 잇습니다.
           에디터 픽 · 인증 큐레이터 · 커뮤니티 후기의 세 겹 신뢰 위에서 생태계가 천천히 넓어집니다.
         </p>
-        <div class="biz-axis-items">
-          <div class="biz-axis-item">웰니스 큐레이션 - 공간 · 업체 연결</div>
-        </div>
         </div>
       </div>
       <div class="biz-axis" data-num="04">
@@ -2498,9 +2742,6 @@ section {
           우리는 이곳을 <strong>보리 커먼즈(BORIH Commons)</strong>라 부릅니다.
           <em>느슨한 공동의 뜰</em>을 가꾸는 일, 그것이 보리의 비전입니다.
         </p>
-        <div class="biz-axis-items">
-          <div class="biz-axis-item">보리 토크 </div>
-        </div>
         </div>
       </div>
     </div>
@@ -2532,10 +2773,12 @@ section {
           차와 명상, 마인드풀 워킹 등을 아우르는 보리의 <strong>대표 경험 프로그램</strong>.
           차와 함께하는 정적인 활동과 동적인 활동을 함께 설계합니다.
           보리의 경험은 몸과 마음을 모두 아우릅니다.
+          음악 · 미술 · 인문학 등 다양한 분야와 손잡고, 차 한 잔의 시간을 더 넓고 깊게 엮어갑니다.
         </p>
         <div class="pb-list">
-          <div class="pb-list-item">정적 활동 · 차회, 티크닉, 차 명상</div>
+          <div class="pb-list-item">정적 활동 · 차회, 티크닉, 차 명상 — <strong>DMZ 피스피스 페스티벌 · DMZ 숲 오픈 위크</strong></div>
           <div class="pb-list-item">동적 활동 · 마인드풀 워킹 등</div>
+          <div class="pb-list-item">다양한 분야와의 협업 · 음악, 미술, 인문학 등</div>
           <div class="pb-list-item">기업 웰니스 출장 프로그램</div>
         </div>
       </div>
@@ -2550,25 +2793,13 @@ section {
       </div>
       <div class="pb-body">
         <p class="pb-desc">
-          차와 함께하는 마음 돌봄의 두 가지 형태.
-          <strong>마음서랍</strong>은 내면을 조용히 정리하는 시간이고, <strong>내마음인터뷰</strong>는 그 깊이를 언어로 기록하는 과정입니다.
+          차와 함께하는 마음 돌봄. <strong>내마음인터뷰</strong>는 마음의 깊이를 언어로 기록하는 과정입니다.
           하루의 대화가 한 권의 책으로 남는 것까지 — 보리가 마음을 대하는 정중한 방식입니다.
         </p>
 
-        <div class="pb-signature-grid">
+        <div class="pb-signature-grid pb-signature-grid--single">
           <div class="pb-sig-card">
-            <span class="pb-sig-badge">Program A</span>
-            <h4 class="pb-sig-name">마음서랍</h4>
-            <p class="pb-sig-en">Heart Drawer — Quiet coaching conversation</p>
-            <p class="pb-sig-desc">차와 함께 몸과 마음을 이완하고, 보리가 편안한 코칭으로 함께합니다. 서랍처럼 마음을 조심스럽게, 천천히 열어가는 1시간의 대화.</p>
-            <div class="pb-sig-meta">
-              <span>1 Hour</span>
-              <span>Private 1:1</span>
-              <span>내면 정리</span>
-            </div>
-          </div>
-          <div class="pb-sig-card">
-            <span class="pb-sig-badge">Program B</span>
+            <span class="pb-sig-badge">Signature</span>
             <h4 class="pb-sig-name">내마음인터뷰</h4>
             <p class="pb-sig-en">My Heart Interview — Deep self-dialogue</p>
             <p class="pb-sig-desc">신청 사연에서 보리가 셋팅한 질문카드를 직접 뽑으며, 차와 함께 스스로를 깊이 인터뷰합니다. 나의 이야기를 온전히 꺼내는 2시간의 스토리텔링 인터뷰.</p>
@@ -2594,24 +2825,51 @@ section {
         <p class="pb-desc">
           차와 함께하는 모든 형태의 토크. 차담(茶談)·북토크·독서모임, 그리고 웰니스 주제를 깊이 다루는 <strong>보리 컨퍼런스</strong>까지.
           형식보다 <strong>"차를 마시며 함께 생각을 나눈다"</strong>는 본질이 중요합니다.
-          5–6월은 웰니스 관련 책을 낸 저자들의 북토크와 함께 운영됩니다.
         </p>
         <div class="pb-list">
-          <div class="pb-list-item">차담 (자유로운 차와 대화)</div>
-          <div class="pb-list-item">북토크 (웰니스 저자 초청 · 5·6월 시작)</div>
-          <div class="pb-list-item">독서모임 · 같은 책, 다른 결을 나누는 자리</div>
+          <div class="pb-list-item">북토크 · 웰니스 저자 초청 — <strong>김나이 · 신기율 · 김규림</strong> 작가 외</div>
+          <div class="pb-list-item">독서모임 · <strong>모닝레시피클럽</strong> 운영 (아파트멘토 협업)</div>
           <div class="pb-list-item">보리 컨퍼런스 · 웰니스 토론</div>
-          <div class="pb-list-item">소규모 8–12인 · 서로의 목소리가 닿는 자리</div>
+        </div>
+        <a class="pb-cta" href="https://borih-official.github.io/morningrecipeclub/" target="_blank" rel="noopener">
+          <span class="pb-cta-txt"><span class="pb-cta-lbl">Online Library</span>모닝레시피클럽 라이브러리 들어가기</span>
+          <span class="pb-cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 04 보리 AI 클래스 -->
+    <div class="program-block reveal">
+      <div class="pb-head">
+        <p class="pb-idx">Program 04 · Wellness × Technology</p>
+        <h3 class="pb-name">보리 AI 클래스</h3>
+        <p class="pb-name-en">BORIH AI Class · Technology as a Wellness Companion</p>
+      </div>
+      <div class="pb-body">
+        <p class="pb-desc">
+          웰니스와 기술이 만나는 자리. 보리는 AI를 빠르게 쓰는 도구가 아니라,
+          삶의 균형을 돕는 <strong>웰니스 컴패니언</strong>으로 바라봅니다.
+          웰니스의 핵심이 균형이듯, AI와의 관계에서도 속도와 깊이의 균형이 필요합니다.
+          AI가 깊어질수록, 인간의 <strong>깊이 있는 생각</strong>은 오히려 더 귀해집니다.
+          보리 AI 클래스는 그 균형을 조용히 연습하는 시간입니다.
+          첫 워크숍의 주제는 <em>'나를 잘 아는 든든한 AI 비서 만들기'</em> — 차 한 잔을 곁에 두고,
+          자기 인식에서 출발해 기술을 삶의 리듬에 맞게 길들입니다.
+        </p>
+        <div class="pb-list">
+          <div class="pb-list-item">나의 언어 · 리듬 · 질문을 정리하는 자기 인식 워크 · 맞춤 프롬프트와 컨텍스트</div>
+          <div class="pb-list-item">차와 함께하는 워크숍</div>
+          <div class="pb-list-item">깊이 있는 생각을 지키는 AI 루틴</div>
+          <div class="pb-list-item"><strong>'나를 잘 아는 AI 비서 만들기' 1기 완료</strong> · <strong>2기 클래스 오픈 준비 중</strong></div>
         </div>
       </div>
     </div>
 
-    <!-- 04 보리 프레스 -->
+    <!-- 05 보리 절기 프레스 -->
     <div class="program-block reveal pb-dark">
       <div class="pb-head">
-        <p class="pb-idx">Program 04 · Knowledge Axis</p>
-        <h3 class="pb-name">보리 프레스 <span class="pb-name-sub">(웰니스 트렌드 리포트)</span></h3>
-        <p class="pb-name-en">BORIH Press · Wellness Foresight Report</p>
+        <p class="pb-idx">Program 05 · Knowledge Axis</p>
+        <h3 class="pb-name">보리 절기 프레스</h3>
+        <p class="pb-name-en">BORIH Seasonal Press · Wellness Foresight Report</p>
       </div>
       <div class="pb-body">
         <p class="pb-desc">
@@ -2629,9 +2887,9 @@ section {
               <span class="pb-trend-src">Source</span>
             </div>
             <div class="pb-trend-main">
-              <div class="pb-trend-lbl">Global Signal</div>
-              <h4 class="pb-trend-title">세계 동향에서 시그널을 포착한 전망</h4>
-              <p class="pb-trend-desc">전 세계 웰니스의 흐름을 트렌드 전문가의 시선으로 읽어냅니다. 현상 너머의 의미까지 함께 전합니다.</p>
+              <div class="pb-trend-lbl">Global &amp; Nature Signal</div>
+              <h4 class="pb-trend-title">세계의 흐름과 자연의 절기를 따르는 시그널</h4>
+              <p class="pb-trend-desc">전 세계 웰니스의 흐름을 트렌드 전문가의 시선으로 읽고, 24절기가 건네는 자연의 신호에 귀 기울입니다. 세계의 속도와 계절의 리듬, 그 사이에서 지금 우리에게 필요한 웰니스를 전합니다.</p>
             </div>
           </div>
           <div class="pb-trend-card" data-src="02">
@@ -2646,17 +2904,13 @@ section {
             </div>
           </div>
         </div>
-
-        <div class="pb-list">
-          <div class="pb-list-item"><strong>5월 5일 입하(立夏)</strong>에 첫 발행</div>
-        </div>
       </div>
     </div>
 
-    <!-- 05 보리 웰니스 큐레이션 -->
+    <!-- 06 보리 웰니스 큐레이션 -->
     <div class="program-block reveal">
       <div class="pb-head">
-        <p class="pb-idx">Program 05 · Curation Axis</p>
+        <p class="pb-idx">Program 06 · Curation Axis</p>
         <h3 class="pb-name">보리 웰니스 큐레이션</h3>
         <p class="pb-name-en">BORIH Wellness Curation Platform</p>
       </div>
@@ -2669,31 +2923,6 @@ section {
         <div class="pb-list">
           <div class="pb-list-item">커뮤니티 후기가 쌓이는 웰니스 지도</div>
           <div class="pb-list-item">일상 가까운 곳부터, 차근차근 넓혀갑니다</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 06 보리 AI 클래스 -->
-    <div class="program-block reveal">
-      <div class="pb-head">
-        <p class="pb-idx">Program 06 · Wellness × Technology</p>
-        <h3 class="pb-name">보리 AI 클래스</h3>
-        <p class="pb-name-en">BORIH AI Class · Technology as a Wellness Companion</p>
-      </div>
-      <div class="pb-body">
-        <p class="pb-desc">
-          웰니스와 기술이 만나는 자리. 보리는 AI를 빠르게 쓰는 도구가 아니라,
-          삶의 균형을 돕는 <strong>웰니스 컴패니언</strong>으로 바라봅니다.
-          웰니스의 핵심이 균형이듯, AI와의 관계에서도 속도와 깊이의 균형이 필요합니다.
-          AI가 깊어질수록, 인간의 <strong>깊이 있는 생각</strong>은 오히려 더 귀해집니다.
-          보리 AI 클래스는 그 균형을 조용히 연습하는 시간 — 예컨대 <em>'나를 잘 아는 든든한 AI 비서 만들기'</em>처럼,
-          자기 인식에서 출발해 기술을 삶의 리듬에 맞게 길들이는 수업들로 이어집니다.
-        </p>
-        <div class="pb-list">
-          <div class="pb-list-item">나의 언어 · 리듬 · 질문을 정리하는 자기 인식 워크</div>
-          <div class="pb-list-item">예) 나를 잘 아는 AI 비서 만들기 · 맞춤 프롬프트와 컨텍스트</div>
-          <div class="pb-list-item">깊이 있는 생각을 지키는 AI 루틴</div>
-          <div class="pb-list-item">차 한 잔과 함께, 기술과의 속도를 고르는 시간</div>
         </div>
       </div>
     </div>
@@ -2718,13 +2947,25 @@ section {
       BORIH의 콘텐츠가 그 사람들을 <strong>보이지 않게 잇고</strong>,<br />
       보리 티트릿이 그 연결을 <strong>몸으로 새기고</strong>,<br />
       보리 마음 시그니처가 그 깊이를 <strong>기록하고</strong>,<br />
-      보리 프레스가 그 신호를 <strong>세상에 발신하고</strong>,<br />
+      보리 절기 프레스가 그 신호를 <strong>세상에 발신하고</strong>,<br />
       보리 웰니스 큐레이션이 그 생태계를 <strong>넓힙니다</strong>.
     </div>
     <div class="strat-close reveal reveal-delay-4">
       <p class="strat-close-line">함께일 때 마침내 우리 안에서 <em>깨달음, 보리</em>로 피어납니다.</p>
     </div>
     <p class="strat-sign reveal reveal-delay-5">BORIH — The Art of Being Well</p>
+
+    <div class="strat-partners reveal">
+      <p class="strat-partners-lbl">With BORIH · 함께한 파트너</p>
+      <ul class="strat-partners-list">
+        <li><a href="https://www.instagram.com/haegeumseoga" target="_blank" rel="noopener">해금서가</a></li>
+        <li><a href="https://blog.naver.com/writingin180days" target="_blank" rel="noopener">책과강연</a></li>
+        <li><a href="https://www.instagram.com/apartmento.seoul" target="_blank" rel="noopener">아파트멘토</a></li>
+        <li><span>라이투스컴퍼니</span></li>
+        <li><a href="https://www.instagram.com/classic.magazine_kr" target="_blank" rel="noopener">클래식매거진</a></li>
+        <li><a href="https://www.instagram.com/dmzforest" target="_blank" rel="noopener">DMZ숲</a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -2988,6 +3229,39 @@ section {
   </div><!-- /activities__inner -->
 </section>
 
+<!-- ══ BORIH TEAROOM · 온라인 차실 ══ -->
+<section class="tearoom-wrap" id="tearoom">
+  <div class="tearoom-inner">
+    <div class="tearoom-header">
+      <p class="section-label reveal">Part 04 · Online Tearoom</p>
+      <h2 class="section-title reveal reveal-delay-1">보리 차실</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      <p class="section-body reveal reveal-delay-2">
+        평일 새벽, 보리 모닝은 함께 책을 읽고 차를 마십니다.<br />
+        그 아침을 언제든 머물 수 있도록, <em>해가 뜨는 자리</em>에 온라인 차실을 지었습니다.<br />
+        어디에 있든 문을 열고 들어와, 같은 아침에 차 한 잔을 우려요.
+      </p>
+    </div>
+
+    <div class="tearoom-grid">
+      <div class="tearoom-card reveal">
+        <span class="tearoom-badge">Tearoom 01 · Open</span>
+        <h3 class="tearoom-name">정동진 보리 차실</h3>
+        <p class="tearoom-en">Jeongdongjin · Sunrise by the East Sea</p>
+        <p class="tearoom-desc">동해의 해가 가장 먼저 닿는 바닷가 차실. 찻자리에 앉아 차를 우리고, 함께 마신 잔을 하나씩 기록으로 남깁니다.</p>
+        <a class="tearoom-btn" href="https://borih-official.github.io/jeongdongjin/" target="_blank" rel="noopener">차실 들어가기 <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="tearoom-card tearoom-card--soon reveal reveal-delay-1">
+        <span class="tearoom-badge">Tearoom 02 · Coming Soon</span>
+        <h3 class="tearoom-name">하동 보리 차실</h3>
+        <p class="tearoom-en">Hadong · Hanok Pavilion under Jirisan</p>
+        <p class="tearoom-desc">화개골 언덕의 한옥 누마루. 대청마루를 열면 지리산 능선 사이로 해가 떠오르고, 계단 아래로 차밭 산책길이 이어집니다.</p>
+        <span class="tearoom-btn tearoom-btn--soon" aria-disabled="true">곧 열려요</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CONTACT / 협업·제안 FOOTER ══ -->
 <section class="contact-wrap" id="contact">
   <div class="contact-inner">
@@ -2999,7 +3273,7 @@ section {
     <div class="contact-divider reveal reveal-delay-2"></div>
     <p class="contact-lead reveal reveal-delay-2">
       BORIH는 브랜드 · 공간 · 기관과 함께 차로 잇는 웰니스 경험을 설계합니다.<br />
-      보리 티트릿 · 마인드풀 티 컨설팅 · 보리 프레스 · 보리토크 —<br />
+      보리 티트릿 · 마인드풀 티 컨설팅 · 보리 절기 프레스 · 보리토크 —<br />
       구성원이 <strong>함께 인사이트를 나누는 자리</strong>가 필요한 곳이라면, 보리가 곁에 있습니다.
     </p>
 
@@ -3012,7 +3286,7 @@ section {
         </div>
         <div class="contact-method">
           <span class="contact-method-lbl">For</span>
-          <p>브랜드 웰니스 프로그램 · 티 컨설팅 · 기업 리추얼<br />보리 프레스 파트너십 · 북토크 연계</p>
+          <p>브랜드 웰니스 프로그램 · 티 컨설팅 · 기업 리추얼<br />보리 절기 프레스 파트너십 · 북토크 연계</p>
         </div>
         <div class="contact-method">
           <span class="contact-method-lbl">Response</span>
@@ -3050,7 +3324,7 @@ section {
 <!-- ══ FOOTER ══ -->
 <footer class="footer">
   <span class="footer-logo en-brand">BORIH</span>
-  <span class="footer-copy">2026 version. 2</span>
+  <span class="footer-copy">2026 version. 3</span>
 </footer>
 
 <script>
