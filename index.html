@@ -2522,6 +2522,10 @@ section {
 .tearoom-card--soon .tearoom-badge { color: var(--teal-dust); }
 .tearoom-btn--soon { background: transparent; color: var(--teal-dust); border-color: var(--teal-dust); }
 .tearoom-btn--soon:hover { background: transparent; }
+.tearoom-sub {
+  font-family: var(--font-ko); font-size: 15px; font-weight: 400; letter-spacing: .08em;
+  color: var(--morning-deep); margin-top: 10px;
+}
 /* 인라인 링크 */
 .pb-inline-link { border-bottom-color: var(--morning); }
 
@@ -2583,6 +2587,13 @@ section {
   border: 1px solid rgba(232,223,200,.28);
   border-radius: 999px;
 }
+.strat-partners-more {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 4px;
+  font-family: var(--font-ko); font-size: 13.5px; font-weight: 500; letter-spacing: .05em;
+  color: var(--bark-deep); background: #e8dfc8; padding: 13px 26px; text-decoration: none;
+  transition: background .25s ease, color .25s ease;
+}
+.strat-partners-more:hover { background: var(--warm-white); }
 @media (max-width: 640px) { .strat-partners-list li { font-size: 12.5px; padding: 8px 14px; } }
 </style>
 </head>
@@ -2741,7 +2752,7 @@ section {
           콘텐츠 · 경험 · 플랫폼이 만나 자연스럽게 모이는 자리 —
           우리는 이곳을 <strong>보리 커먼즈(BORIH Commons)</strong>라 부릅니다.
           <em>느슨한 공동의 뜰</em>을 가꾸는 일, 그것이 보리의 비전입니다.
-        </p>
+         그 뜰은 온라인 <a class="pb-inline-link" href="#tearoom">보리 차실</a>로도 이어집니다.</p>
         </div>
       </div>
     </div>
@@ -2956,15 +2967,8 @@ section {
     <p class="strat-sign reveal reveal-delay-5">BORIH — The Art of Being Well</p>
 
     <div class="strat-partners reveal">
-      <p class="strat-partners-lbl">With BORIH · 함께한 파트너</p>
-      <ul class="strat-partners-list">
-        <li><a href="https://www.instagram.com/haegeumseoga" target="_blank" rel="noopener">해금서가</a></li>
-        <li><a href="https://blog.naver.com/writingin180days" target="_blank" rel="noopener">책과강연</a></li>
-        <li><a href="https://www.instagram.com/apartmento.seoul" target="_blank" rel="noopener">아파트멘토</a></li>
-        <li><span>라이투스컴퍼니</span></li>
-        <li><a href="https://www.instagram.com/classic.magazine_kr" target="_blank" rel="noopener">클래식매거진</a></li>
-        <li><a href="https://www.instagram.com/dmzforest" target="_blank" rel="noopener">DMZ숲</a></li>
-      </ul>
+      <p class="strat-partners-lbl">With BORIH</p>
+      <a class="strat-partners-more" href="with.html">함께한 파트너와 사람들 <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -3233,12 +3237,14 @@ section {
 <section class="tearoom-wrap" id="tearoom">
   <div class="tearoom-inner">
     <div class="tearoom-header">
-      <p class="section-label reveal">Part 04 · Online Tearoom</p>
+      <p class="section-label reveal">Part 04 · BORIH Commons Online</p>
       <h2 class="section-title reveal reveal-delay-1">보리 차실</h2>
+      <p class="tearoom-sub reveal reveal-delay-1">보리 커먼즈의 온라인 뜰</p>
       <div class="divider reveal reveal-delay-2"></div>
       <p class="section-body reveal reveal-delay-2">
-        평일 새벽, 보리 모닝은 함께 책을 읽고 차를 마십니다.<br />
-        그 아침을 언제든 머물 수 있도록, <em>해가 뜨는 자리</em>에 온라인 차실을 지었습니다.<br />
+        보리 커먼즈는 차 한 잔을 사이에 두고 느슨하게 모이는 공동의 뜰입니다.<br />
+        그 뜰을 온라인으로 옮겨, <em>해가 뜨는 자리</em>마다 차실을 지었습니다.<br />
+        평일 새벽 보리 모닝이 함께 책을 읽고 차를 마시는 곳 —<br />
         어디에 있든 문을 열고 들어와, 같은 아침에 차 한 잔을 우려요.
       </p>
     </div>
